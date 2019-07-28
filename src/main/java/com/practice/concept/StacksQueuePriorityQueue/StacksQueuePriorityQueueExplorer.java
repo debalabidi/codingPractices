@@ -10,6 +10,6 @@ public class StacksQueuePriorityQueueExplorer {
         Stack myStack = new Stack();
         Queue myQueue = new LinkedList();
         PriorityQueue myPriorityQueue = new PriorityQueue();
-
+  // yahoo.
     }
 }
