@@ -79,4 +79,8 @@ public class BST {
         return this;
     }
 
+    private BST remove (int value, BST node){
+        return null;
+    }
+
 }
