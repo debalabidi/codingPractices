@@ -103,6 +103,7 @@ public class BSTTest {
         instance.insert(5);
         instance.remove(5);
         assertFalse(instance.contains(5));
+        assertTrue (instance.contains(10));
     }
 
     @Test
@@ -138,6 +139,23 @@ public class BSTTest {
         instance.insert(15);
         instance.insert(2);
         instance.remove(5);
+        assertTrue(instance.contains(15));
+        assertTrue(instance.contains(10));
+        assertFalse(instance.contains(5));
+        assertTrue(instance.contains(2));
+    }
+
+
+    @Test
+    public void removeHeadElementWithlowestFromRight()throws Exception{
+        instance = new BST(10);
+        instance.insert(5);
+        instance.insert(15);
+        instance.insert(2);
+        instance.insert(25);
+        instance.insert(14);
+        instance.insert(12);
+        instance.remove(10);
         assertTrue(instance.contains(15));
         assertTrue(instance.contains(10));
         assertFalse(instance.contains(5));
