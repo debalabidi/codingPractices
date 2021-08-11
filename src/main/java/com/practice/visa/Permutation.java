@@ -1,5 +1,7 @@
 package com.practice.visa;
 
+
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -10,26 +12,56 @@ import java.util.List;
 public class Permutation {
     public static void main(String[] args) {
         ArrayList<String> result = new ArrayList<>();
-        final String input = "ABCD";
-        int[] array = {3,4,7};
-        ArrayList<int[]> resultInt = new ArrayList<>();
+        final String input = "ABC";
+        int[] array = {1,2,3};
+//        ArrayList<int[]> resultInt = new ArrayList<>();
 //        permutationString("", input);
 //        System.out.println(result.toString());
 //        permutationOfArray(input, 0, input.length()-1);
 //        permute(input, 0, input.length()-1);
-        resultInt = permutationInt(array, 0, resultInt);
-        for (int[] i : resultInt){
-            System.out.println(Arrays.toString(i));
+//        resultInt = permutationInt(array, 0, resultInt);
+//        for (int[] i : resultInt){
+//            System.out.println(Arrays.toString(i));
+//        }ring
+
+        permutationOfString(input);
+    }
+
+    static void permutationOfString (String input ){
+        List<String> result = new ArrayList<>();
+        permutationHelper(0, input.toCharArray(), result);
+        for(String item : result){
+            System.out.println("item = " + item);
         }
     }
 
+    static void permutationHelper(int index, char[] input, List<String> result){
+        if( index == input.length){
+            result.add(Arrays.toString(input.clone()));
+        }else{
+            for(int j = index; j < input.length; j++){
+                swapChars(input, index, j);
+                permutationHelper(index+1, input, result);
+                swapChars(input, index, j);
+            }
+        }
+    }
+
+    private static void swapChars(char[] input, int index, int j) {
+        char temp = input[index];
+        input[index] = input[j];
+        input[j] = temp;
+
+    }
+
+
     static ArrayList<int[]> permutationInt(int[] array, int i, ArrayList<int[]> resultInt){
-        if(i >= array.length){
+        if(i == array.length){
             resultInt.add(array.clone());
         }else{
             for(int x = i; x < array.length; x++){
                 array = swap(array, i, x);
-                permutationInt(array, x+1, resultInt);
+                permutationInt(array, i+1, resultInt);
                 array = swap(array, i, x);
 
             }
