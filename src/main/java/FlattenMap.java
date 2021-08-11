@@ -11,6 +11,8 @@ class FlattenMap {
         return flattenDictionary(dict, flatMap, null, null);
     }
 
+    //adding more comments
+
     static HashMap<String, String> flattenDictionary(HashMap<String, Object> dict, HashMap<String, String> flatMap, String key, Object value) {
         String key1 = null;
         Object value1 = null;
