@@ -10,6 +10,7 @@ public class TestingClass {
         TestingClass myapp = new TestingClass();
         myapp.execute();
     }
+    //debal
     public void execute(){
         int[] arrayTest = new int[10] ;
         for (int i = 0; i < arrayTest.length; i++) {

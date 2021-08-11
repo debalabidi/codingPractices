@@ -4,6 +4,8 @@ import java.util.*;
 
 class FlattenMap {
 
+    // adding comments
+
     static HashMap<String, String> flattenDictionary(HashMap<String, Object> dict) {
         HashMap<String, String> flatMap = new HashMap<String, String>();
         return flattenDictionary(dict, flatMap, null, null);
