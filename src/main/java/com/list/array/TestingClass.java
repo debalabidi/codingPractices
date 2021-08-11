@@ -1,4 +1,4 @@
-package array.exploration;
+package com.list.array;
 
 import com.sun.org.apache.xpath.internal.operations.String;
 

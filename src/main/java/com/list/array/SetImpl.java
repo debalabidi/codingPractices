@@ -1,4 +1,4 @@
-package array.exploration;
+package com.list.array;
 
 /**
  * Created by dabidi on 7/5/21.

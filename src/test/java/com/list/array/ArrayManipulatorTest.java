@@ -1,11 +1,10 @@
-package array.exploration;
+package com.list.array;
 
+import com.list.array.ArrayManipulator;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
-
-import java.util.Arrays;
 
 import static org.junit.Assert.*;
 

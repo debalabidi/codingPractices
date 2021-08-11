@@ -1,9 +1,10 @@
-package array.exploration;
+package com.list.array;
 
 /**
  * Created by dabidi on 7/4/21.
  */
 public class ArrayManipulator {
+
     public int[] addElement(int[] inputArray, int position, int element) {
         int [] result = null;
         result =  new int[inputArray.length+1];
